@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://nafezly.com/css/fontawsome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive-font.css">
+    <style type="text/css">
+    * {
+        font-family: 'Almarai', sans-serif;
+        outline: none;
+        text-align: right;
+        text-decoration: none !important;
+    }
+
+    body {
+        direction: rtl;
+
+    }
+
+    .row {
+        margin: 0px !important;
+    }
+
+    html {
+        --main-color: #2c003f;
+    }
+
+    .main-color {
+        color: var(--main-color) !important;
+    }
+
+    .main-bg-color {
+        background: var(--main-color) !important;
+    }
+
+    .right-aside {
+        width: 310px;
+        min-height: 100vh;
+        position: fixed;
+        z-index: 123;
+        right: 0px
+    }
+
+    .border,
+    .border-left,
+    .border-right,
+    .border-top,
+    .border-bottom {
+        border-color: #f1f1f1 !important;
+    }
+
+    .real-content,
+    .right-aside {
+        transition: all .2s ease-in-out;
+        background: #fff;
+    }
+
+
+    .content-container.aside .right-aside {
+        right: -310px;
+    }
+
+
+    @media(max-width: 768px) {
+        .right-aside {
+            position: absolute !important;
+            right: -310px;
+            z-index: 45451111111 !important;
+        }
+
+        .real-content {
+            margin-right: 0px !important;
+            width: 100% !important
+        }
+
+        .content-container.aside .right-aside {
+            right: 0px !important;
+        }
+
+        .content-container.aside .real-content {
+            width: 100% !important;
+            margin-right: 0px !important;
+        }
+
+
+    }
+
+    .category-card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+
+    .content-container.aside .real-content {
+        width: 100% !important;
+        margin-right: 0px !important;
+    }
+
+    .circle-chart {
+        /* position: absolute !important;*/
+    }
+
+    svg {
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .circle-chart__circle {
+        transition: all .5s ease;
+    }
+
+    .circle-chart__circle {
+        animation: circle-chart-fill .5s reverse;
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
+    .category-card>div:nth-of-type(1):hover .category-img-container {
+        background: var(--main-color) !important;
+    }
+
+    .category-card>div:nth-of-type(1):hover .category-img-container>img {
+        filter: brightness(0) invert(1);
+        ;
+        /* IE6-9 */
+
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    </style>
+    <title>Profile Page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark main-bg-color fixed-top" style="border-bottom: 1px solid #480067;box-shadow:0px 2px 3px #301b3a">
+        <span class="fal fa-bars toggle-aside" style="color: #fff;font-size: 20px;cursor: pointer;"></span>
+        <a class="navbar-brand" href="#" style="font-weight: bold;">الفيزياء</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff">
+                        مرحباً محمد
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="col-12 px-0" style="margin-top: 56px;">
+        <div class="container-fluid px-0">
+            <div class="col-12 row px-0 content-container">
+                <div class="right-aside" style="box-shadow: 15px 14px 22px #2c003f">
+                    <div class="col-12 px-0 border-bottom pb-4 main-bg-color" style="">
+                        <div class="col-12 px-0 row pt-3">
+                            <div class="col text-center">
+                                <span class="badge badge-light" style="border-radius: 17px!important;padding: 6px 9px;font-size: 10px;">
+                                    <span class="far fa-wallet"></span>
+                                    المحفظة</span>
+                            </div>
+                            <div class="col-5 text-center px-0" style="color: #fff">
+                                بطاقة الطالب
+                            </div>
+                            <div class="col text-center">
+                                <span class="badge badge-light" style="border-radius: 17px!important;padding: 6px 9px;font-size: 10px;">
+                                    <span class="far fa-edit"></span>
+                                    تعديل</span>
+                            </div>
+                        </div>
+                        <div class="col-12 px-0 d-flex justify-content-center pt-4">
+                            <div class="m-auto  d-flex justify-content-center" style="width: 120px;border-radius: 50%;border:2px dashed #fff;height: 120px;">
+                                <img src="https://img.icons8.com/plasticine/2x/user.png" style="width: 95px;height: 95px;margin-top: 7px">
+                            </div>
+                        </div>
+                        <div class="m-auto  text-center pt-3" style="color: #fff">
+                            محمد عبدالله
+                        </div>
+                        <div class="m-auto  text-center mt-4 pt-2">
+                            <span class="badge badge-warning" style="background: #fa6400;color: #feeee3;border-radius: 23px;font-size: 11px;padding: 6px 13px;">غير مفعل</span>
+                        </div>
+                    </div>
+                    <div class="col-12 px-0" style="border-left: 1px solid #f1f1f1">
+                        <div class="col-12 row px-0 py-2 border-bottom">
+                            <div class="col-2 px-0 text-center">
+                                <span class="fal fa-analytics main-color"></span>
+                            </div>
+                            <div class="col-8 main-color px-0">
+                                الاحصائيات
+                            </div>
+                            <div class="col-2 text-left main-color">
+                                <span class="badge badge-light pt-1" style="height: 20px;width: 20px;border-radius: 50%;background: #d5ccd9">8</span>
+                            </div>
+                        </div>
+                        <div class="col-12 row px-0 py-2 border-bottom">
+                            <div class="col-2 px-0 text-center">
+                                <span class="fal fa-users main-color"></span>
+                            </div>
+                            <div class="col-8 main-color px-0">
+                                مجموعة
+                            </div>
+                            <div class="col-2 text-left main-color">
+                                <span class="badge badge-light pt-1" style="height: 20px;width: 20px;border-radius: 50%;background: #d5ccd9">6</span>
+                            </div>
+                        </div>
+                        <div class="col-12 row px-0 py-2 border-bottom">
+                            <div class="col-2 px-0 text-center">
+                                <span class="fal fa-comments-alt main-color"></span>
+                            </div>
+                            <div class="col-8 main-color px-0">
+                                الرسائل الواردة
+                            </div>
+                            <div class="col-2 text-left main-color">
+                                <span class="badge badge-light pt-1" style="height: 20px;width: 20px;border-radius: 50%;background: #d5ccd9">3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-0 col-12 px-0 border mt-3 ">
+                        <div class="card-header" style="background: #fff;border: none;">
+                            الاحصائيات
+                        </div>
+                        <ul class="list-group list-group-flush px-0">
+                            <li class="list-group-item border-bottom d-flex" style="font-size: 12px;">
+                                <div class="col-10 px-1">
+                                    عدد الاختبارات السابقة
+                                </div>
+                                <div class="col-2 px-0 text-left">
+                                    2
+                                </div>
+                            </li>
+                            <li class="list-group-item border-bottom d-flex" style="font-size: 12px;">
+                                <div class="col-10 px-1">
+                                    عدد الفصول الافتراضية حضرتها
+                                </div>
+                                <div class="col-2 px-0 text-left">
+                                    7
+                                </div>
+                            </li>
+                            <li class="list-group-item border-bottom d-flex" style="font-size: 12px;">
+                                <div class="col-10 px-1">
+                                    عدد الاسئلة تم حلها
+                                </div>
+                                <div class="col-2 px-0 text-left">
+                                    8
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex" style="font-size: 12px;">
+                                <div class="col-10 px-1">
+                                    عدد الفصول تم تحضيرها
+                                </div>
+                                <div class="col-2 px-0 text-left">
+                                    6
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 px-0 border mt-3  p-2 row" style="    margin-top: 24px!important;">
+                        <div class="col-6 position-relative ">
+                            <div class="col-12 px-0 text-center main-color pb-3" style="font-size: 12px">نسبة التقدم في المنهج</div>
+                            <svg class="circle-chart" viewBox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#f1f1f1" stroke-width="1" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"></circle>
+                                <circle class="circle-chart__circle" stroke="#2c003f" stroke-width="1.5" stroke-dasharray="75" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"></circle>
+                            </svg>
+                            <span class="position-absolute text-center main-color" style="left: 0px;right: 0px;margin-top: 34px;font-size: 32px;">%75</span>
+                        </div>
+                        <div class="col-6 position-relative ">
+                            <div class="col-12 px-0 text-center pb-3" style="font-size: 12px;color: #ff5722">نسبة التقدم في المنهج</div>
+                            <svg class="circle-chart" viewBox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="circle-chart__background" stroke="#f1f1f1" stroke-width="1" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"></circle>
+                                <circle class="circle-chart__circle" stroke="#ff5722" stroke-width="1.5" stroke-dasharray="46" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"></circle>
+                            </svg>
+                            <span class="position-absolute text-center" style="left: 0px;right: 0px;margin-top: 34px;font-size: 32px;color: #ff5722">%46</span>
+                        </div>
+                    </div>
+                    <style type="text/css">
+                    </style>
+                </div>
+                <div class="real-content" style="width: calc(100% - 310px);margin-right: 310px">
+                    <div class="col-12 pt-2 row ">
+                        <div class="col-12 col-lg-8 col-xl-9 px-0">
+                            <div class="col-12 px-0 pt-2 row">
+                                <div class="col-4 col-lg-2 px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <img src="assets/classes.png" style="padding: 5px;width: 100%;padding-top: 19px">
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> الفصل الافتراضي</div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <img src="assets/live.png" style="padding: 5px;width: 100%;padding-top: 16px">
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> البث المباشر</div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <img src="assets/exams.png" style="padding: 5px;width: 100%;padding-top: 22px">
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> الاختبارات السابقة</div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <img src="assets/book.png" style="padding: 5px;width: 100%;padding-top: 18px">
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> المذكرة الالكترونية</div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <img src="assets/resource.png" style="padding: 5px;width: 100%;padding-top: 6px">
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> المنهج </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <img src="assets/q-bank.png" style="padding: 5px;width: 100%;padding-top: 10px">
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> بنك الاسئلة </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 pt-4 row">
+                                <div class="col-12 py-4" style="box-shadow: 0px 0px 12px #dedede;border-radius: 6px">
+                                    <div class="col-12 px-0 font-7" style="color: var(--main-color)">
+                                        دخول الاختبار
+                                    </div>
+                                    <div class="col-12 px-0 font-small mb-2">
+                                        اكتب كود الاختبار للدخول إلى الاختبار الخاص بك
+                                    </div>
+                                    <div class="col-12 px-0 mt-2 position-relative">
+                                        <button class="btn position-absolute text-center  main-bg-color" style="left: 0px;height: 45px;padding-top: 4px;width: 120px;color: #fff;border-top-left-radius: 26px;border-bottom-left-radius: 26px;">دخول</button>
+                                        <input type="" name="" class="form-control" style="border-radius: 60px;border:1px solid var(--main-color);height: 45px;" placeholder="اكتب كود الاختبار مثلا : 123456">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <hr>
+                            </div>
+                            <div class="col-12 px-0 " style="height: 60vh;overflow: auto;">
+                                <div class="col-12 pt-4 row">
+                                    <div class="col-12 py-4" style="box-shadow: 0px 0px 12px #dedede;border-radius: 6px">
+                                        <div class="col-12 px-0 row">
+                                            <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                    <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                        <img data-src="" src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="p-0 d-inline-block" style="min-width: 200px;">
+                                                <div class="col-12 px-2">
+                                                    <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                        <div class="col-12 px-0 pt-2">
+                                                            <a href="https://nafezly.com/u/Profmohamed" style="color: #333" class="pt-0 kufi font-2 mt-0 d-inline-block"> Mahammed Ramadan </a>
+                                                            <span style="color: #919191" class="font-small d-block">
+                                                                <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                        <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 font-1">
+                                            شباب دا ما سيتم مراجعته ان شاء الله في الحصة القادمة القاكم على خير
+                                        </div>
+                                        <div class="col-12 pt-3 px-2">
+                                            <div class="col-12 border rounded row py-3 px-2">
+                                                <div class="col-2 col-lg-1 px-0 text-left">
+                                                    <span class="fas fa-file-pdf font-6" style="color: #e2574c"></span>
+                                                </div>
+                                                <div class="col-7 col-lg-8 font-1 pt-0" style="color: #7c7c7c">
+                                                    ملزمة الحجز ل 3 ث.ع
+                                                    <div>
+                                                        <span class="font-small" style="color: #7c7c7c">12 ميجا</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 text-center text-lg-left">
+                                                    <a href="#">
+                                                        <span class="fal fa-download font-6" style="color: #7c7c7c"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 pt-3 px-2">
+                                            <div class="col-12 border rounded row py-3 px-2">
+                                                <div class="col-2 col-lg-1 px-0 text-left">
+                                                    <span class="fas fa-file-pdf font-6" style="color: #e2574c"></span>
+                                                </div>
+                                                <div class="col-7 col-lg-8 font-1 pt-0" style="color: #7c7c7c">
+                                                    ملزمة الحجز ل 3 ث.ع
+                                                    <div>
+                                                        <span class="font-small" style="color: #7c7c7c">12 ميجا</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 text-center text-lg-left">
+                                                    <a href="#">
+                                                        <span class="fal fa-download font-6" style="color: #7c7c7c"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0">
+                                            <hr style="border-top:1px solid #f5f5f5">
+                                        </div>
+                                        <div class="col-12 px-0">
+                                            <div style="width: 60px;color: #999" class="d-inline-block font-1 ml-1">
+                                                <span class="fal fa-thumbs-up" style="font-size: 22px;"></span>
+                                                16K </div>
+                                            <div style="width: 60px;color: #999" class="d-inline-block font-1 ml-1">
+                                                <span class="fal fa-comments-alt" style="font-size: 22px;"></span>
+                                                136 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pt-4 row">
+                                    <div class="col-12 py-4" style="box-shadow: 0px 0px 12px #dedede;border-radius: 6px">
+                                        <div class="col-12 px-0 row">
+                                            <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                    <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                        <img data-src="" src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="p-0 d-inline-block" style="min-width: 200px;">
+                                                <div class="col-12 px-2">
+                                                    <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                        <div class="col-12 px-0 pt-2">
+                                                            <a href="https://nafezly.com/u/Profmohamed" style="color: #333" class="pt-0 kufi font-2 mt-0 d-inline-block"> Mahammed Ramadan </a>
+                                                            <span style="color: #919191" class="font-small d-block">
+                                                                <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                        <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 font-1">
+                                            شباب دا ما سيتم مراجعته ان شاء الله في الحصة القادمة القاكم على خير
+                                        </div>
+                                        <div class="col-12 pt-3 px-2">
+                                            <div class="col-12 border rounded row py-3 px-2">
+                                                <div class="col-2 col-lg-1 px-0 text-left">
+                                                    <span class="fas fa-file-pdf font-6" style="color: #e2574c"></span>
+                                                </div>
+                                                <div class="col-7 col-lg-8 font-1 pt-0" style="color: #7c7c7c">
+                                                    ملزمة الحجز ل 3 ث.ع
+                                                    <div>
+                                                        <span class="font-small" style="color: #7c7c7c">12 ميجا</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 text-center text-lg-left">
+                                                    <a href="#">
+                                                        <span class="fal fa-download font-6" style="color: #7c7c7c"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 pt-3 px-2">
+                                            <div class="col-12 border rounded row py-3 px-2">
+                                                <div class="col-2 col-lg-1 px-0 text-left">
+                                                    <span class="fas fa-file-pdf font-6" style="color: #e2574c"></span>
+                                                </div>
+                                                <div class="col-7 col-lg-8 font-1 pt-0" style="color: #7c7c7c">
+                                                    ملزمة الحجز ل 3 ث.ع
+                                                    <div>
+                                                        <span class="font-small" style="color: #7c7c7c">12 ميجا</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 text-center text-lg-left">
+                                                    <a href="#">
+                                                        <span class="fal fa-download font-6" style="color: #7c7c7c"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0">
+                                            <hr style="border-top:1px solid #f5f5f5">
+                                        </div>
+                                        <div class="col-12 px-0">
+                                            <div style="width: 60px;color: #999" class="d-inline-block font-1 ml-1">
+                                                <span class="fal fa-thumbs-up" style="font-size: 22px;"></span>
+                                                16K </div>
+                                            <div style="width: 60px;color: #999" class="d-inline-block font-1 ml-1">
+                                                <span class="fal fa-comments-alt" style="font-size: 22px;"></span>
+                                                136 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 col-xl-3">
+                            <div class="col-12 border  py-2 mt-3" style="box-shadow: 0px 0px 12px #dedede;border-radius: 8px">
+                                <div class="col-12 text-center main-color border-bottom py-2" style="font-weight: bold">
+                                    مستواك في آخر 4 أختبارات
+                                </div>
+                                <div class="col-12 pt-4 pb-2">
+                                    <div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col">
+                                                <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
+                                                    <span style="height: 40px;background: #7a94c2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 50px;background: #c0e1b0;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 30px;background: #f2d65b;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 40px;background: #d3d1d2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
+                                                    <span style="height: 20px;background: #7a94c2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 30px;background: #c0e1b0;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 60px;background: #f2d65b;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 50px;background: #d3d1d2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
+                                                    <span style="height: 40px;background: #7a94c2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 50px;background: #c0e1b0;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 30px;background: #f2d65b;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 40px;background: #d3d1d2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
+                                                    <span style="height: 20px;background: #7a94c2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 30px;background: #c0e1b0;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 60px;background: #f2d65b;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                    <span style="height: 50px;background: #d3d1d2;width: 18px;" class="d-inline-block">
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="col-12 text-center py-2">
+                                                <span class="badge badge-warning main-bg-color px-4 py-2" style="color: #fff;border-radius: 30px "> 88% </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 border  py-2 mt-3" style="box-shadow: 0px 0px 12px #dedede;border-radius: 8px">
+                                <div class="col-12 text-center main-color border-bottom py-2" style="font-weight: bold">
+                                    نتيجة آخر اختبار
+                                </div>
+                                <div class="col-12 pt-4 pb-2">
+                                    <div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col text-center font-1" style="color: #666">
+                                                    الكود
+                                                </div>
+                                                <div class="col text-center font-1" style="color: #666">
+                                                    الدرجة
+                                                </div>
+                                                <div class="col text-center px-0 font-1" style="color: #666">
+                                                    التاريخ
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col text-center font-1">
+                                                    4589
+                                                </div>
+                                                <div class="col text-center font-1">
+                                                    90
+                                                </div>
+                                                <div class="col text-center px-0 font-1">
+                                                    هذا الشهر
+                                                </div>
+                                            </div>
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col text-center font-1">
+                                                    6971
+                                                </div>
+                                                <div class="col text-center font-1">
+                                                    93
+                                                </div>
+                                                <div class="col text-center px-0 font-1">
+                                                    اليوم
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 border  py-2 mt-3" style="box-shadow: 0px 0px 12px #dedede;border-radius: 8px">
+                                <div class="col-12 text-center main-color border-bottom py-2" style="font-weight: bold">
+                                    من مدونة المنصة
+                                </div>
+                                <div class="col-12 pt-4 pb-2 px-0 ">
+                                    <div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col-12 px-0 row">
+                                                    <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                        <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                            <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                                <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-0 d-inline-block" style="width: calc(100% - 65px)">
+                                                        <div class="col-12 px-2">
+                                                            <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                                <div class="col-12 px-0 pt-2">
+                                                                    <a href="https://nafezly.com/u/Profmohamed" style="color: var(--maincolor)" class="pt-0 kufi font-1 mt-0 d-inline-block"> مراجعة ليلة الامتحان 2020 أولى ثانوي </a>
+                                                                    <span style="color: #919191" class="font-small d-block">
+                                                                        <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                        أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                                <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col-12 px-0 row">
+                                                    <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                        <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                            <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                                <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-0 d-inline-block" style="width: calc(100% - 65px)">
+                                                        <div class="col-12 px-2">
+                                                            <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                                <div class="col-12 px-0 pt-2">
+                                                                    <a href="https://nafezly.com/u/Profmohamed" style="color: var(--maincolor)" class="pt-0 kufi font-1 mt-0 d-inline-block"> مراجعة ليلة الامتحان 2020 أولى ثانوي </a>
+                                                                    <span style="color: #919191" class="font-small d-block">
+                                                                        <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                        أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                                <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col-12 px-0 row">
+                                                    <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                        <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                            <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                                <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-0 d-inline-block" style="width: calc(100% - 65px)">
+                                                        <div class="col-12 px-2">
+                                                            <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                                <div class="col-12 px-0 pt-2">
+                                                                    <a href="https://nafezly.com/u/Profmohamed" style="color: var(--maincolor)" class="pt-0 kufi font-1 mt-0 d-inline-block"> مراجعة ليلة الامتحان 2020 أولى ثانوي </a>
+                                                                    <span style="color: #919191" class="font-small d-block">
+                                                                        <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                        أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                                <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col-12 px-0 row">
+                                                    <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                        <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                            <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                                <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-0 d-inline-block" style="width: calc(100% - 65px)">
+                                                        <div class="col-12 px-2">
+                                                            <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                                <div class="col-12 px-0 pt-2">
+                                                                    <a href="https://nafezly.com/u/Profmohamed" style="color: var(--maincolor)" class="pt-0 kufi font-1 mt-0 d-inline-block"> مراجعة ليلة الامتحان 2020 أولى ثانوي </a>
+                                                                    <span style="color: #919191" class="font-small d-block">
+                                                                        <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                        أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                                <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-12 px-0 row mb-2">
+                                                <div class="col-12 px-0 row">
+                                                    <div class="text-center d-inline-block" style="width: 65px;padding: 5px!important">
+                                                        <a href="https://nafezly.com/u/Profmohamed" style="display: block;">
+                                                            <div style="width: 65px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;max-width: 100%;position: relative;max-height: 55px;">
+                                                                <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 100%;border-radius: 50%!important;padding: 3px;height: 55px" alt="صورة صاحب مقدم العرض">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="p-0 d-inline-block" style="width: calc(100% - 65px)">
+                                                        <div class="col-12 px-2">
+                                                            <div class="px-0 pt-0 cairo mt-1 row col-12  ">
+                                                                <div class="col-12 px-0 pt-2">
+                                                                    <a href="https://nafezly.com/u/Profmohamed" style="color: var(--maincolor)" class="pt-0 kufi font-1 mt-0 d-inline-block"> مراجعة ليلة الامتحان 2020 أولى ثانوي </a>
+                                                                    <span style="color: #919191" class="font-small d-block">
+                                                                        <span class="fal fa-clock " aria-hidden="true" style="font-size: 12px"></span>
+                                                                        أمس : 8.00 مساءً &nbsp; &nbsp;
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                                <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 0px 0px">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $('.toggle-aside').on('click', function() {
+        $('.content-container').toggleClass('aside');
+    });
+    </script>
+</body>
+
+</html>
