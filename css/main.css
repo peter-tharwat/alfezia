@@ -1,0 +1,134 @@
+* {
+    font-family: 'Almarai', sans-serif;
+    outline: none;
+    text-align: right;
+    text-decoration: none !important;
+}
+
+body {
+    direction: rtl;
+
+}
+
+.row {
+    margin: 0px !important;
+}
+
+html {
+    --main-color: #2c003f;
+}
+
+.main-color {
+    color: var(--main-color) !important;
+}
+
+.main-bg-color {
+    background: var(--main-color) !important;
+}
+
+.right-aside {
+    width: 310px;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 123;
+    right: 0px
+}
+
+.border,
+.border-left,
+.border-right,
+.border-top,
+.border-bottom {
+    border-color: #f1f1f1 !important;
+}
+
+.real-content,
+.right-aside {
+    transition: all .2s ease-in-out;
+    background: #fff;
+}
+
+
+.content-container.aside .right-aside {
+    right: -310px;
+}
+
+
+@media(max-width: 768px) {
+    .right-aside {
+        position: fixed !important;
+        right: -310px;
+        z-index: 45451111111 !important;
+    }
+
+    .real-content {
+        margin-right: 0px !important;
+        width: 100% !important
+    }
+
+    .content-container.aside .right-aside {
+        right: 0px !important;
+    }
+
+    .content-container.aside .real-content {
+        width: 100% !important;
+        margin-right: 0px !important;
+    }
+
+
+}
+
+.category-card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.content-container.aside .real-content {
+    width: 100% !important;
+    margin-right: 0px !important;
+}
+
+.circle-chart {
+    /* position: absolute !important;*/
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.circle-chart__circle {
+    transition: all .5s ease;
+}
+
+.circle-chart__circle {
+    animation: circle-chart-fill .5s reverse;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.category-card>div:nth-of-type(1):hover .category-img-container {
+    background: var(--main-color) !important;
+}
+
+.category-card>div:nth-of-type(1):hover .category-img-container>img {
+    filter: brightness(0) invert(1);
+    ;
+    /* IE6-9 */
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.dark,
+.dark * {
+    background: #232323 !important;
+    color: #fff !important;
+    box-shadow: unset !important;
+    border-color: #2e2e2e !important;
+}
