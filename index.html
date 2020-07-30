@@ -12,7 +12,7 @@
     <title>Profile Page</title>
 </head>
 
-<body>
+<body style="position: relative;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark main-bg-color fixed-top" style="border-bottom: 1px solid #480067;box-shadow:0px 2px 3px #301b3a;padding: 4px 17px;">
         <span class="fal fa-bars toggle-aside" style="color: #fff;font-size: 20px;cursor: pointer;"></span>
         <a class="navbar-brand p-1" href="#" style="font-weight: bold;">
@@ -22,16 +22,67 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff">
-                        مرحباً محمد
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="change-mood">
-                        <a class="dropdown-item" href="#">الوضع الليلي</a>
-                    </div>
-                </li>
-            </ul>
+            <div class="d-inline-block  mr-auto" style="display: flex!important">
+                <div class="d-inline-block seen-notifications show" style="height: 50px;">
+                    <span class="d-inline-block nav-bar-icon text-center" style="position: relative;width: 50px;cursor: pointer;padding: 17px 0px 0px;text-align: center;height: 60px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span style=" color: white; position: absolute;top: 6px;border-radius: 5px!important;padding:4px 5px 0px;right: 2px;z-index: 1;display:none;" class="badge badge-danger count_unseen_notifications tajawal">0</span>
+                        <span class="fal fa-bell" style="color: #fff; font-size: 24px;text-align: center;display: inline-block; padding:0px;"></span>
+                        <div class="dropdown-menu p-0 " aria-labelledby="dropdownMenuButton" style="width: 380px;cursor: auto;top: 54px;max-width: 95vw!important;border-radius: 0px 0px 5px 5px;overflow: hidden; left: -122px;border-color: #f3d8ff">
+                            <span class="fas fa-caret-up" style="color:#fff;position: absolute;top:-14px;left:16px;font-size: 21px"></span>
+                            <div class="col-12  notifications-notifications-area px-0 " style="height: 540px;overflow: auto;padding: 0px; ">
+                                <div class="col-12 mt-1  px-0 pb-0 noselect notifications-notifications hover-light" style="border-bottom: 1px solid var(--bg-main-bg);background:">
+                                    <div class="col-12 row pl-0 pr-1" onclick="$('#chat-box').slideDown();">
+                                        <a href="https://nafezly.com/u/Profmohamed">
+                                            <div class="text-center" style="max-width: 78px;padding: 14px 9px 0px 9px!important;">
+                                                <div style="display:flex;">
+                                                    <div style="width: 45px;background: var(--bg-second-bg);display: inline-block;border-radius: 50%!important;box-shadow: 0px 0px 12px #e0e0e0;max-width: 100%;position: relative;height: 45px;" class="m-auto notification-image">
+                                                        <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg
+                                            " style="width: 45px;border-radius: 50%!important;padding: 5px;height: 100%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class=" p-2 " style="display: inline-block;width: calc(100% - 63px) ">
+                                            <div>
+                                                <div style=" font-size: 14px ;font-weight: normal; " class="px-0 pt-0 cairo mt-1  ">
+                                                    <span style="display: block;font-size: 15px;word-wrap: break-word" class="naskh-inner naskh">
+                                                        <a href="#" class="cairo">الوصف : السلام عليكم ورحمة الله استاذ محمد رمضان ..</a>
+                                                    </span>
+                                                </div>
+                                                <div style=" display: inline-block;position: relative;font-size: 14px;color: #919191">
+                                                    <div class="col-12  px-0  text-right text-md-right " style="color: #919191;font-size: 13px;padding: 6px 0px">
+                                                        <span class="fal fa-clock ml-1  font-small" aria-hidden="true"></span>
+                                                        <span class="naskh font-small">منذ ساعة</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style=" padding: 9px 0px ;border-top: 1px solid #f1f1f1" class="col-12 ">
+                                <div class="col-12 row px-0">
+                                    <div class="col-12 text-center" style="color: #919191">
+                                        <a href="#" class="noselect cairo" style="color: var(--bg-color-0)">
+                                            <span class="fal fa-bell"></span> عرض كل الاشعارات
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <ul class="navbar-nav px-0 pt-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff">
+                            مرحباً محمد
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="change-mood">
+                            <a class="dropdown-item" href="#">الوضع الليلي</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="col-12 px-0" style="margin-top: 56px;">
@@ -163,7 +214,7 @@
                     <div class="col-12 pt-2 row px-0 px-md-2 ">
                         <div class="col-12 col-lg-8 col-xl-9 px-0">
                             <div class="col-12 px-0 pt-2 row">
-                                <div class="col-4 col-lg-2 px-0 category-card">
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
                                     <div class="col-12 px-0 text-center">
                                         <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
                                             <img src="assets/classes.png" style="padding: 5px;width: 100%;padding-top: 19px">
@@ -173,7 +224,7 @@
                                     <div>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2 px-0 category-card">
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
                                     <div class="col-12 px-0 text-center">
                                         <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
                                             <img src="assets/live.png" style="padding: 5px;width: 100%;padding-top: 16px">
@@ -183,7 +234,7 @@
                                     <div>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2 px-0 category-card">
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
                                     <div class="col-12 px-0 text-center">
                                         <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
                                             <img src="assets/exams.png" style="padding: 5px;width: 100%;padding-top: 22px">
@@ -193,7 +244,7 @@
                                     <div>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2 px-0 category-card">
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
                                     <div class="col-12 px-0 text-center">
                                         <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
                                             <img src="assets/book.png" style="padding: 5px;width: 100%;padding-top: 18px">
@@ -203,7 +254,7 @@
                                     <div>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2 px-0 category-card">
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
                                     <div class="col-12 px-0 text-center">
                                         <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
                                             <img src="assets/resource.png" style="padding: 5px;width: 100%;padding-top: 6px">
@@ -213,12 +264,32 @@
                                     <div>
                                     </div>
                                 </div>
-                                <div class="col-4 col-lg-2 px-0 category-card">
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
                                     <div class="col-12 px-0 text-center">
                                         <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
                                             <img src="assets/q-bank.png" style="padding: 5px;width: 100%;padding-top: 10px">
                                         </div>
                                         <div class="text-center pt-2" style="font-size: 13px;"> بنك الاسئلة </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 px-0 col-xl category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <!--  <img src="assets/q-bank.png" style="padding: 5px;width: 100%;padding-top: 10px"> -->
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> خانة مضافة </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-lg-2 col-xl px-0 category-card">
+                                    <div class="col-12 px-0 text-center">
+                                        <div class="m-auto category-img-container" style="width: 70px;border:2px solid var(--main-color);border-radius: 50%;height: 70px;">
+                                            <!--  <img src="assets/q-bank.png" style="padding: 5px;width: 100%;padding-top: 10px"> -->
+                                        </div>
+                                        <div class="text-center pt-2" style="font-size: 13px;"> خانة مضافة </div>
                                     </div>
                                     <div>
                                     </div>
@@ -412,7 +483,7 @@
                                 <div class="col-12 pt-4 pb-2">
                                     <div>
                                         <div class="col-12 px-0 row">
-                                            <div class="col">
+                                            <div class="col text-center">
                                                 <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
                                                     <span style="height: 40px;background: #7a94c2;width: 18px;" class="d-inline-block">
                                                     </span>
@@ -424,7 +495,7 @@
                                                     </span>
                                                 </span>
                                             </div>
-                                            <div class="col">
+                                            <div class="col text-center">
                                                 <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
                                                     <span style="height: 20px;background: #7a94c2;width: 18px;" class="d-inline-block">
                                                     </span>
@@ -436,7 +507,7 @@
                                                     </span>
                                                 </span>
                                             </div>
-                                            <div class="col">
+                                            <div class="col text-center">
                                                 <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
                                                     <span style="height: 40px;background: #7a94c2;width: 18px;" class="d-inline-block">
                                                     </span>
@@ -448,7 +519,7 @@
                                                     </span>
                                                 </span>
                                             </div>
-                                            <div class="col">
+                                            <div class="col text-center">
                                                 <span style="height: 160px;background: ;width: 18px;border-radius: 30px;background: #ddd;overflow: hidden;" class="d-inline-block">
                                                     <span style="height: 20px;background: #7a94c2;width: 18px;" class="d-inline-block">
                                                     </span>
@@ -673,6 +744,90 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed;bottom: 0px;width:400px;z-index: 455454544554;background: #fff;height: 500px;left: 10px;border:1px solid var(--main-color)" id="chat-box">
+        <div class="container-gerdany py-2 nav-gerdany-fixed-top main-bg-color">
+            <span style="left: 10px;top: 10px;cursor: pointer;" class="main-bg-color-hover px-3 py-1 rounded position-absolute" onclick="$('#chat-box').slideUp();">
+                <span class="fal fa-times font-3 mt-1" style="color: #fff"></span>
+            </span>
+            <div class=" text-right font-sm-3 font-2    row" style="padding-right: 42px;padding-top: 3px">
+                <span class="" style="width: 40px;">
+                    <img src="https://storage.googleapis.com/nafezly/uploads/avatars/15902663345ec989ded486a.jpg" style="width: 38px;background: #fff;border-radius: 50%">
+                </span>
+                <span class="font-small pr-2" style="width: calc(100% - 40px)">
+                    <span class="font-2 d-block" style="color: #fff;">
+                        مستر محمد
+                    </span>
+                    <span class="font-small d-block " style="color: #f1f1f1">
+                        يكتب الآن ...
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="container-gerdany content-gerdany-w-top px-1">
+            <div class="d-flex  m-auto ">
+                <div class="" style="max-width: 100%; max-height: 386px;position: relative;">
+                    <div class="m-auto px-0 " style="height: 386px;overflow: auto;">
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: var(--main-color);color:#fff">
+                                لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-2 p-2 rounded"></div>
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: #e6e5eb">
+                                هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد .
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: var(--main-color);color:#fff">
+                                مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-2 p-2 rounded"></div>
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: #e6e5eb">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد .
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: var(--main-color);color:#fff">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-2 p-2 rounded"></div>
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: #e6e5eb">
+                                النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد .
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: var(--main-color);color:#fff">
+                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                            </div>
+                        </div>
+                        <div class="col-12  text-right px-1 pt-2 pb-3 row">
+                            <div class="col-12 col-sm-2 p-2 rounded"></div>
+                            <div class="col-12 col-sm-10 p-2 rounded" style="background: #e6e5eb">
+                                النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد .
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" text-center  border-top mx-auto justify-content-center d-flex container-gerdany content-gerdany-w-top-bottom px-0 pt-2">
+            <div class="m-auto col-12 px-2">
+                <div class="col-12 px-0 row">
+                    <div style="width: calc(100% - 60px)">
+                        <input type="" name="" class="form-control" style="border-radius: 50px">
+                    </div>
+                    <div style="width:60px" class="text-center d-flex">
+                        <span class="fas fa-caret-left font-4  text-center m-auto" style="background: #231f20;color: #fff;height: 35px;width: 35px;padding: 5px;border-radius: 50%"> </span>
+                    </div>
+                </div> 
             </div>
         </div>
     </div>
